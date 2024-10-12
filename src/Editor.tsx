@@ -81,7 +81,7 @@ export class Editor extends Component<EditorProps, EditorState> {
     return <div>
       <label>
       Move to: 
-      <select value={this.state.building === undefined ? "current location" : this.state.building.longName} onChange={this.doLocationChange}>
+      <select value={this.state.building === undefined ? "current zach" : this.state.building.longName} onChange={this.doLocationChange}>
         {BUILDINGS.sort((a : Building,b: Building) => {return a.longName.localeCompare(b.longName)}).map((building, index) => 
           {
             if(building.longName.toLowerCase().includes(this.state.filter.toLowerCase())){
